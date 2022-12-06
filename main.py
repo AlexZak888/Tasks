@@ -120,3 +120,23 @@ best_student2.rate_l(cool_lecturer2, 'Git', 9)
 
 student_list = [best_student, best_student2]
 lecturer_list = [cool_lecturer, cool_lecturer2]
+
+
+def student_rating(student_list, course_name):
+    sum_all = 0
+    count_all = []
+    for stud in student_list:
+        if stud.courses_in_progress == [course_name]:
+            sum_all += len(student_list[stud])
+            count_all.extent(stud)
+    return float(sum(sum_all)/max(len(count_all), 1))
+
+
+def lecturer_rating(lecturer_list, course_name):
+    sum_all = 0
+    count_all = 0
+    for lect in lecturer_list:
+        if lect.courses_attached == [course_name]:
+            sum_all += len(lecturer_list[lect])
+            count_all.extent(lect)
+    return float(sum(sum_all) / max(len(count_all), 1))
